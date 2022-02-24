@@ -148,6 +148,7 @@
                 </thead>
              <tbody>
              <!-- @php($i=1) -->
+             @if($trashCat->count()!==0)
       @foreach($trashCat as $item)
                      <tr>
                         <th scope="row">
@@ -174,7 +175,7 @@
 
                     @endforeach 
    
-   
+                     @endif
               </tbody>
               </table>
      {{ $trashCat->links() }}

@@ -38,6 +38,7 @@
                                                       </thead>
                                                       <tbody>
                                                           @php($i=1)  
+                                                          @if($contacts->count()!==0)
                                                           @foreach($contacts as $item)
                                                               <tr>
                                                               <th scope="row">
@@ -59,7 +60,7 @@
 
                                                 @endforeach 
                                     
-                                                  
+                                                  @endif
                                                 </tbody>
                                                   
                                               </table>

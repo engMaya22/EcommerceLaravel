@@ -39,16 +39,18 @@
                  </thead>
                 <tbody>
              <!-- @php($i=1) -->
+             @if($brands->count()!==0)
              @foreach($brands as $item)
                      <tr>
                         <th scope="row">
+                         
 <!-- {{$i++}} -->
                   {{$brands->firstItem() + $loop->index}}
                         </th>
                          <td>{{$item->brand_name}}</td>
                          <td><img src="{{asset($item->brand_image)}}" style="height:40px; width: 70px;"   alt=""></td>
                          <td>
-                             @if($item->created_at == NULL)
+                             @if($item->created_at == NULL){
                  <span class="text-danger"> No Data Set</span>
                             @else
                            {{$item->created_at->diffForHumans()}}
@@ -64,7 +66,9 @@
 
 
                     @endforeach 
-   
+                             
+                       
+                    @endif
    
               </tbody>
              

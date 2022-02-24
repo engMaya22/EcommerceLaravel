@@ -38,6 +38,7 @@
                                                       </thead>
                                                       <tbody>
                                                           @php($i=1)  
+                                                          @if($abouthome->count()!==0)
                                                           @foreach($abouthome as $item)
                                                               <tr>
                                                               <th scope="row">
@@ -58,6 +59,7 @@
                                                 
 
                                                 @endforeach 
+                                                @endif
                                     
                                                   
                                                 </tbody>
